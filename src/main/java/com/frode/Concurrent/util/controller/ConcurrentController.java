@@ -1,8 +1,7 @@
 package com.frode.Concurrent.util.controller;
 
 import com.fasterxml.jackson.databind.util.JSONPObject;
-import com.frode.Concurrent.util.pressuretest.AsynExcutor;
-import com.frode.Concurrent.util.pressuretest.ConcurrentPressure;
+import com.frode.Concurrent.util.pressure.AsynExcutor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;

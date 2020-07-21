@@ -1,4 +1,4 @@
-package com.frode.Concurrent.util.pressuretest;
+package com.frode.Concurrent.util.pressure;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.List;
 
 @Service
-public class ConcurrentPressure {
+public class HttpService {
 
     @Autowired
     RestTemplate restTemplate;
