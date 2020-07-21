@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.*;
 
@@ -43,8 +42,9 @@ public class AsynExcutor {
             }
         } finally {
         }
+        System.out.println("请求url:" + url);
         statistic.statisticsNinetyFivePercentTime(tookTime, total);
-
+        statistic.statisticsTotalTime(tookTime, total);
         long t2 = System.currentTimeMillis();
         System.out.println(nums + "并发量，请求" + total + "次" + "花费时间：" + (t2 - t1));
     }

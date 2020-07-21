@@ -7,6 +7,7 @@ import java.util.List;
 
 @Component
 public class Statistic {
+
     public void statisticsNinetyFivePercentTime(List<Long> tookTime, int total) {
         System.out.println("排序前：" + tookTime);
         Collections.sort(tookTime);
@@ -17,6 +18,14 @@ public class Statistic {
             totalTime += tookTime.get(i);
         }
         System.out.println("前百分之95所花费的平均时间为：" + totalTime / total);
-        System.out.println("排序后：" + tookTime);
+    }
+
+    public void statisticsTotalTime(List<Long> tookTime, int total) {
+        Collections.sort(tookTime);
+        long totalTime = 0;
+        for (int i = 0; i < total; i++) {
+            totalTime += tookTime.get(i);
+        }
+        System.out.println("响应平均时间为：" + totalTime / total);
     }
 }
